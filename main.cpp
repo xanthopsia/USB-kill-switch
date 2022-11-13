@@ -1,8 +1,6 @@
-#define BOOST_USE_WINDOWS_H
 #include <boost/asio.hpp>
 #include <windows.h>
 #include <SetupAPI.h>
-#include <iostream>
 #include <devguid.h>
 #include <vector>
 #include <algorithm>
