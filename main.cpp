@@ -41,6 +41,7 @@ int main() {
         t.wait();
         HDEVINFO DeviceInfoSet = SetupDiGetClassDevs(guid, NULL, NULL, DIGCF_PRESENT | DIGCF_PROFILE);
         foundUsbs = FindUsbDevices(guid, DeviceInfoSet);
+        SetupDiDestroyDeviceInfoList(DeviceInfoSet);
         if (std::find(foundUsbs.begin(), foundUsbs.end(), usb) == foundUsbs.end())
         {
             shutdown();
